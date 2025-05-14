@@ -10,6 +10,10 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:  # ← أهم جزء!
+      contents: write  # للكتابة على الفرع (مثل gh-pages)
+      pages: write     # لنشر GitHub Pages
+      id-token: write  # للتوثيق (إن لزم)
     steps:
       - uses: actions/checkout@v4
 
