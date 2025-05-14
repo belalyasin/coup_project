@@ -1,15 +1,16 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
-# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
-
 name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [master]  # يُشغّل عند push إلى فرع main
+    branches: [main]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
       - uses: actions/checkout@v4
 
@@ -24,8 +25,9 @@ jobs:
       - name: Build project
         run: npm run build -- --configuration=production
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/coup_project  # مسار مجلد الـ build
+          github_token: ${{ secrets.GH_PAT }}  # أو secrets.GITHUB_TOKEN
+          publish_dir: ./dist/coup_project
+          publish_branch: gh-pages
