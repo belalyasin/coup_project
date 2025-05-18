@@ -1,0 +1,56 @@
+<div class="flex flex-col items-center justify-center w-full h-full">
+  <form class="flex flex-col items-center justify-start mt-5 md:mt-30 2xl:mt-90 2xl:mt-55 w-full h-full absolute z-30">
+    <div class="flex flex-col items-center justify-center mb-2 md:mb-5">
+      <h1
+        class="text-[#B33F62] font-[cairo] text-4xl w-[100%] 2xl:w-[100%] 2xl:text-6xl font-extrabold leading-[100px]">
+        هلا و غلا
+      </h1>
+    </div>
+    <div>
+      <input type="text" placeholder="البريد الإلكتروني"
+             class="md:w-80 w-45 h-16 rounded-lg shadow-md/30 bg-white focus:outline-none focus:ring-2 focus:ring-[#AFA8F3] px-4 mb-2 md:mb-6 font-['Almarai'] placeholder:text-[#61305D] placeholder:text-lg placeholder:font-normal placeholder:font-[Almarai]"
+             required>
+    </div>
+    <div class="relative md:w-80 w-45 mb-2 md:mb-6">
+      <input
+        type="password"
+        placeholder="كلمة المرور"
+        class="w-full h-16 pl-12 pr-4 rounded-lg shadow-md/30 bg-white focus:outline-none focus:ring-2 focus:ring-[#AFA8F3] font-['Almarai'] placeholder:text-[#61305D] placeholder:text-lg placeholder:font-normal placeholder:font-[Almarai]"
+      />
+      <!-- أيقونة العين في اليسار -->
+      <div class="absolute inset-y-0 left-3 flex items-center cursor-pointer">
+        <!-- SVG: Eye icon -->
+        <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" stroke-width="2"
+             viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+          <path
+            d="M2.458 12C3.732 7.943 7.523 5 12 5s8.268 2.943 9.542 7c-1.274 4.057-5.065 7-9.542 7S3.732 16.057 2.458 12z"/>
+        </svg>
+      </div>
+    </div>
+    <div class="w-45 md:w-80 flex flex-row items-center justify-center mb-2 md:mb-6">
+      <input type="checkbox" class="w-6 h-6 ml-2 cursor-pointer"/>
+      <span class="md:w-80 w-45 text-[#61305D] text-xl text-neutral-800 font-bold font-['Almarai']">تذكرني</span>
+    </div>
+    <div class="w-fit flex flex-col items-center justify-center">
+      <button type="submit"
+              class="md:w-80 w-45 h-16 mb-2 md:mb-4 bg-[#C24C4C] text-white shadow-md/30 rounded-lg font-[cairo] font-bold hover:bg-[#AE1E1E] transition duration-300 ease-in-out cursor-pointer">
+        تسجيل الدخول
+      </button>
+      <button type="submit"
+              class="md:w-80 w-45 h-16 md:px-0 px-3 bg-[#434343] text-white shadow-md/30 rounded-lg font-[cairo] font-bold hover:bg-[#2b2828] transition duration-300 ease-in-out cursor-pointer flex items-center justify-center gap-3">
+        تسجيل باستخدام حساب قوقل
+        <svg class="w-6 h-6" viewBox="0 0 533.5 544.3" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#4285f4"
+                d="M533.5 278.4c0-18.6-1.5-37-4.7-54.8H272v103.9h146.9c-6.4 34.7-25.7 64.2-54.6 83.9v69.6h88.4c51.7-47.6 80.8-117.9 80.8-202.6z"/>
+          <path fill="#34a853"
+                d="M272 544.3c73.8 0 135.8-24.5 181-66.5l-88.4-69.6c-24.6 16.5-56.3 26.2-92.6 26.2-71 0-131.1-47.9-152.7-112.1H29.7v70.4c45.3 89.5 138.2 151.6 242.3 151.6z"/>
+          <path fill="#fbbc04"
+                d="M119.3 322.3c-10.4-30.7-10.4-63.8 0-94.5V157.3H29.7c-43.7 85.5-43.7 186.7 0 272.2l89.6-70.4z"/>
+          <path fill="#ea4335"
+                d="M272 107.6c39.9-.6 78.2 13.8 107.9 40.4l80.4-80.4C411.6 24.6 343.7-2 272 0 168 0 75 62 29.7 151.6l89.6 70.4c21.7-64.1 81.7-112 152.7-114.4z"/>
+        </svg>
+      </button>
+    </div>
+  </form>
+</div>
